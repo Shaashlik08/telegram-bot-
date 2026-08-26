@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Manage Users</h1>
+
+<div class="form-card">
+    <h2>Create User</h2>
+
+    <form method="POST" action="{{ url_for('admin_create_user') }}">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <select name="role">
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+        </select>
+
+        <button type="submit">Create</button>
+    </form>
+</div>
+
+<input type="text" id="userSearch" placeholder="Search users..." class="search-input">
+
+<table id="usersTable">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Created At</th>
+        <th>Action</th>
+    </tr>
+
+    {% for user in users %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.created_at }}</td>
+        <td>
+            <form method="POST" action="{{ url_for('admin_delete_user', user_id=user.id) }}" class="delete-form">
+                <button type="submit" class="danger">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

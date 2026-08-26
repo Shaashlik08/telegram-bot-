@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "user_id": 2,
+        "student_name": "Beknur",
+        "student_group": "SE-2501",
+        "gpa": 3.5,
+        "created_at": "2026-05-21 10:10:00"
+    },
+    {
+        "id": 2,
+        "user_id": 2,
+        "student_name": "Miras",
+        "student_group": "SE-2509",
+        "gpa": "2.8",
+        "created_at": "2026-05-21 15:17:25"
+    }
+]

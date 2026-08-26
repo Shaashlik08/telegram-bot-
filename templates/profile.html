@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>My Profile</h1>
+
+<div class="card">
+    <p><b>Username:</b> {{ user.username }}</p>
+    <p><b>Role:</b> {{ user.role }}</p>
+    <p><b>Created At:</b> {{ user.created_at }}</p>
+    <p><b>Record Count:</b> {{ record_count }}</p>
+</div>
+
+<div class="form-card">
+    <h2>Change Password</h2>
+
+    {% if message %}
+        <p class="success">{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="password" name="password" placeholder="New password" required>
+        <button type="submit">Update Password</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+
+<div class="cards">
+    <div class="card">
+        <h2>Total Users</h2>
+        <p>{{ total_users }}</p>
+    </div>
+
+    <div class="card">
+        <h2>Total Records</h2>
+        <p>{{ total_records }}</p>
+    </div>
+</div>
+
+<h2>Recent Users</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Created At</th>
+    </tr>
+
+    {% for user in recent_users %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
