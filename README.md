@@ -17,15 +17,9 @@ Features:
 ## Technologies
 - Python
 - Flask
-- HTML
-- CSS
 - JavaScript
 - JSON
 - python-telegram-bot
-
----
-## Author
-DonkAliler
 
 ## How to Run
 
