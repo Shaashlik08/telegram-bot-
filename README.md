@@ -8,7 +8,6 @@ Features:
 - Admin and User roles
 - Student records management
 - Session-based authorization
-- HTML/CSS/JavaScript frontend
 - Telegram bot notifications
 - JSON database storage
 
