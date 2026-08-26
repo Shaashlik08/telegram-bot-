@@ -8,8 +8,10 @@ Features:
 - Admin and User roles
 - Student records management
 - Session-based authorization
+- HTML/CSS/JavaScript frontend
 - Telegram bot notifications
 - JSON database storage
+
 
 ---
 
@@ -19,7 +21,7 @@ Features:
 - JavaScript
 - JSON
 - python-telegram-bot
-
+  HTML/css
 ## How to Run
 
 Install dependencies:
